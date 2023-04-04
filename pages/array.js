@@ -1,15 +1,25 @@
 import React from 'react'
-import Cabecalho from '../components/Cabecalho'
-import Rodape from '../components/rodape'
+import Pagina from '../components/Pagina'
 
-const array = () => {
+
+const Array = () => {
+
+  const carros = ['Opala', 'Classic', 'Ka', 'Omega', 'Fuscão',]
+
   return (
     <>
-    <div>array</div>
-    <Cabecalho></Cabecalho>
-    <Rodape></Rodape>
+      <Pagina titulo="Array">
+        
+      <ol>
+        {carros.map(item=>(           
+          <li>{item}</li>          
+        ))}
+        </ol>
+
+      </Pagina>
+
     </>
   )
 }
 
-export default array
+export default Array
